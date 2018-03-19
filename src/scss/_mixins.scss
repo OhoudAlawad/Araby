@@ -1,0 +1,33 @@
+
+@mixin button-style($color){
+    background-color: transparent;
+    color: $color;
+    border-color: $color;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:active:hover{
+        color: darken($color,25%);
+        border-color: darken($color,25%);
+        background-color: transparent;
+    }
+
+}
+
+@mixin button-primary($color,$second-color){
+    background-color: $color;
+    color: $second-color;
+    border-color: $color;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:active:hover{
+        color: $second-color;
+        border-color: darken($color,25%);
+        background-color: darken($color,25%);
+}
+}
